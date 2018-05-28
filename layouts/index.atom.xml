@@ -1,5 +1,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+  {{ if .IsHome }}
+    <title>{{ .Title }}</title>
+  {{ else }}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+  {{ end }}
   <link href="{{ .Permalink }}index.xml" rel="self"/>
   <link href="{{ .Permalink }}"/>{{ if not .Date.IsZero }}
   <updated>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
