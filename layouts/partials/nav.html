@@ -1,3 +1,4 @@
+{{ with .Site.Menus.main }}
 <nav class="{{ if lt (len .Site.Menus.main) 3 }} flex {{ else }} flex-ns{{ end }} justify-between border-box pa3 pl3-l pr2-l mt1 mt0-ns" id="navbar">
   <div class="flex">
     <a class="f4 fw6 ttu no-underline dim bg-main-color pv1 ph2 br2" id="site-title" href='{{ "" | relURL }}' title="Home">{{ .Site.Title }}</a>
@@ -8,3 +9,4 @@
     {{ end }}
   </div>
 </nav>
+{{ end }}
