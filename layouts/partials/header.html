@@ -8,6 +8,9 @@
 <style type="text/css">{{ partial "css/variables.css" . | safeCSS }}</style>
 <link href='{{ "css/tachyons.min.css" | relURL }}' rel="stylesheet">
 <link href='{{ "css/styles.css" | relURL }}' rel="stylesheet">
+{{- if .Site.Params.staticman -}}
+  <link rel="stylesheet" href="{{ "css/staticman.css" | absURL }}" />
+{{- end -}}
 
 <!-- Icon -->
 <link rel="icon" 
