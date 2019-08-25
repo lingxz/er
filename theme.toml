@@ -8,7 +8,7 @@ description = "A clean Hugo theme for blogging"
 homepage = "http://github.com/lingxz/er"
 tags = ["responsive", "white", "blog"]
 features = ["responsive", "blog"]
-min_version = "0.38"
+min_version = "0.57.0"
 
 [author]
   name = "Lingyi Hu"
