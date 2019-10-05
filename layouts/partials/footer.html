@@ -3,3 +3,7 @@
   Powered by <a href="https://gohugo.io/" target="_blank" class="link gray dim">Hugo</a>, based on the <a href="https://github.com/lingxz/er" target="_blank" class="link gray dim">Er</a> theme. <br>
   {{ with .Site.Copyright }}{{ . }}{{end}}
 </footer>
+{{- if .Site.Params.staticman }}
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="{{ "js/staticman.js" | absURL }}"></script>
+{{- end }}

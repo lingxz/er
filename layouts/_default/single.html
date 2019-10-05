@@ -12,6 +12,11 @@
     {{ end }}
   </p>
   <div class="lh-copy post-content">{{ .Content }}</div>
+  {{ if .Site.Params.staticman }}
+    <div class="staticman-comments">
+      {{ partial "staticman-comments.html" . }}
+    </div>
+  {{ end }}
 </main>
 {{ partial "table-of-contents" . }}
 
